@@ -103,17 +103,45 @@ function displayCourses(filter = "All") {
 
     const filteredCourses = filter === "All" ? courses : courses.filter(course => course.subject === filter);
 
+    // Calculate total credits dynamically
+    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+
+    // Calculate completed courses and earned credits
+    const completedCourses = filteredCourses.filter(course => course.completed);
+    const completedCredits = completedCourses.reduce((sum, course) => sum + course.credits, 0);
+    
     filteredCourses.forEach(course => {
         const courseDiv = document.createElement("div");
-        courseDiv.textContent = `${course.subject} ${course.number} - ${course.title}`;
-        courseDiv.style.backgroundColor = course.completed ? "#fca311" : "#14213d";
-        courseDiv.style.color = "white";
+        courseDiv.textContent = `${course.subject} ${course.number} - ${course.title} (${course.credits} credits)`;
+
+        if (course.completed) {
+            courseDiv.style.backgroundColor = "#fca311"; // Highlight completed courses
+            courseDiv.style.color = "black";
+            courseDiv.style.border = "2px solid #14213d";
+            courseDiv.style.fontWeight = "bold";
+        } else {
+            courseDiv.style.backgroundColor = "#14213d"; // Default style for uncompleted courses
+            courseDiv.style.color = "white";
+        }
+
         courseDiv.style.padding = "10px";
         courseDiv.style.margin = "5px";
-        courseDiv.style.borderRadius = "5px";
+        courseDiv.style.borderRadius = "8px";
+
         coursesContainer.appendChild(courseDiv);
     });
+
+    // Display total credits and completed courses count
+    const summaryContainer = document.querySelector(".course-summary");
+    summaryContainer.innerHTML = `
+        <p><strong>Courses Completed:</strong> ${completedCourses.length}</p>
+        <p><strong>Credits Earned:</strong> ${completedCredits}</p>
+    `;
 }
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     displayCourses();
@@ -121,4 +149,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".all").addEventListener("click", () => displayCourses("All"));
     document.querySelector(".cse").addEventListener("click", () => displayCourses("CSE"));
     document.querySelector(".wdd").addEventListener("click", () => displayCourses("WDD"));
+});
+
+
+const mainnav = document.querySelector('.navigation')
+const hambutton = document.querySelector('#menu');
+
+// Add a click event listender to the hamburger button and use a callback function that toggles the list element's list of classes.
+hambutton.addEventListener('click', () => {
+	mainnav.classList.toggle('show');
+	hambutton.classList.toggle('show');
 });
