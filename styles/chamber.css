@@ -3,7 +3,15 @@
   max-width: 1800px;
   max-height: 100%;
   margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
 
+a#menu {
+  display: none;
+}
+
+h1 {
+  text-align: center;
 }
 
 body {
@@ -24,7 +32,6 @@ header {
   grid-column: 1/4;
   text-align: center;
   display: grid;
-  font-family: "Roboto", serif;
   font-weight: 700;
 }
 
@@ -193,3 +200,29 @@ main {
   margin: 0 auto;
   padding: 0 10px;
 }
+
+section.card-bottom, section.courses {
+  border: 2px solid #c9c4c4; /* Border color and thickness */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  padding: 20px; /* Space inside the section */
+  background-color: #c9c4c4; /* Background color */
+
+
+}
+
+button {
+  border: none;          /* Removes the default border */
+  outline: none;         /* Removes the focus outline */
+  background-color: #14213d; /* Set the desired background color */
+  color: white;         /* Ensure text color contrasts */
+  padding: 10px 15px;    /* Add padding for better appearance */
+  cursor: pointer;       /* Change cursor to indicate it's clickable */
+  border-radius: 5px;    /* Optional: smooth rounded edges */
+}
+
+button:focus, button:active {
+  outline: none;         /* Prevents focus outline */
+  box-shadow: none;      /* Removes any glow effect */
+}
+
