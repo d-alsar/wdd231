@@ -136,10 +136,10 @@ div.wdd231 {
   background-color: #c9c4c4;
 }
 
-/*#right img { 
-  width: 100%;      this must be added when the image is fixed 
+#right img { 
+  width: 100%;  
   height: auto;
-}*/
+}
 
 footer {
   background: #14213d;
