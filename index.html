@@ -11,13 +11,10 @@
   <meta name="author" content="Douglas R.Santos">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles/chamber.css">
-  <link rel="stylesheet" href="styles/chamber-large.css">
+  <link rel="stylesheet" href="styles/chamber-small.css">
   <script src="scripts/chamber.js" defer></script>
 </head>
 
@@ -33,16 +30,16 @@
     </div>
 
     <section class="navbar">
-      <div class="navigation">
-        <nav class="navbar">
-          <ul>
-            <li> <a class="active" href="unveiled-folklore.html">Home</a></li>
-            <li> <a class="active" href="unveiled-folklore.html">Chamber</a></li>
-            <li><a href="haunted-places.html">GitHub Profile</a></li>
-            <li><a href="about.html">LinkedIn</a></li>
+      <a href="#" id="menu" a></a>
+
+      <nav class="navbar">
+          <ul class="navigation">
+              <li><a class="active" href="index.html" target="_blank">Home</a></li>
+              <li><a href="chamber.html" target="_blank">Chamber</a></li>
+              <li><a href="https://github.com/d-alsar/wdd231" target="_blank">GitHub Profile</a></li>
+              <li><a href="https://www.linkedin.com/in/douglas-reyesantos/" target="_blank">LinkedIn</a></li>
           </ul>
-        </nav>
-    </div>
+      </nav>
   </section>
   </header>
 
@@ -74,21 +71,15 @@
         <h2>Web and Computer Programming Certificate</h2>
       </div>
       <div class="titles-container">
-        <div class="all">All</div>
-        <div class="cse">CSE</div>
-        <div class="wdd">WDD</div>
+        <div class="all" contenteditable="false">All</div>
+        <div class="cse" contenteditable="false" >CSE</div>
+        <div class="wdd" contenteditable="false">WDD</div>
+        
       </div>
     </section>
-
     <section class="courses">
-      <div class="courses-container">
-        <div class="cse110">CSE 110</div>
-        <div class="wdd130">WDD 130</div>
-        <div class="cse111">CSE 111</div>
-        <div class="cse210">CSE 210</div>
-        <div class="wdd131">WDD 131</div>
-        <div class="wdd231">WDD 231</div>
-      </div>  
+      <div class="courses-container"></div>
+      <div class="course-summary"></div>  
     </section>
 
   </main>
