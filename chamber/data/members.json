@@ -1,0 +1,66 @@
+[
+    {
+      "name": "Tech Solutions El Salvador",
+      "address": "San Salvador, Blvd. Los Héroes",
+      "phone": "+503 2258-1234",
+      "website": "https://techsolutionssv.com/",
+      "image": "tech.webp",
+      "membership_level": 3,
+      "industry": "IT Services"
+    },
+    {
+      "name": "Embotelladora La Cascada",
+      "address": "Santa Tecla, La Libertad",
+      "phone": "+503 2240-5678",
+      "website": "https://www.lacascada.com.sv/es/inicio.php",
+      "image": "salvacola.webp",
+      "membership_level": 2,
+      "industry": "Telecommunications"
+    },
+    {
+      "name": "Café Cuscatlán",
+      "address": "Apaneca, Ahuachapán",
+      "phone": "+503 2265-7890",
+      "website": "https://www.intermall.com/23552100188834890/cafe_cuscatlan.html",
+      "image": "cafe-cuscatlan.webp",
+      "membership_level": 1,
+      "industry": "Food & Beverage"
+    },
+    {
+      "name": "Eco Turismo SA",
+      "address": "Suchitoto, Cuscatlán",
+      "phone": "+503 2298-6543",
+      "website": "https://www.facebook.com/EcotourGuazapa/?locale=fr_FR",
+      "image": "eco-turismo.webp",
+      "membership_level": 2,
+      "industry": "Tourism"
+    },
+    {
+      "name": "Constructora Creaciones SV",
+      "address": "San Miguel, San Miguel",
+      "phone": "+503 2270-4321",
+      "website": "https://creacionessv.com/",
+      "image": "construcciones.webp",
+      "membership_level": 3,
+      "industry": "Construction"
+    },
+    {
+      "name": "El Salvador Express",
+      "address": "Soyapango, San Salvador",
+      "phone": "+503 2233-9876",
+      "website": "https://elsalvadorexpresssv.com/",
+      "image": "express.webp",
+      "membership_level": 1,
+      "industry": "Logistics"
+    },
+    {
+      "name": "Anthonys Pastelería",
+      "address": "Antiguo Cuscatlán, La Libertad",
+      "phone": "+503 2285-2468",
+      "website": "https://anthonyspasteleria.com/",
+      "image": "anthonys.webp",
+      "membership_level": 3,
+      "industry": "Advertising"
+    }
+  ]
+  
