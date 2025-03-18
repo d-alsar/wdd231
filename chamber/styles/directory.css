@@ -42,61 +42,14 @@
     text-align: center;
   }
   
-  
-  
-  .titles-container {
-    display: grid;
-    background: #eceef3;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin: 0 auto;
-    background: #14213d;
-  
-  }
-  
-  .titles-container>div {
-    text-align: center;
-    align-items: center;
-  }
-  
-  
-  
-  .courses-container {
-    display: grid;
-    background: #eceef3;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px;
-    gap: 5px;
-    margin-bottom: 5px;
-  }
-  
-  .courses-container>div {
-    text-align: center;
-  }
-  
-  div.cse110,
-  div.wdd130,
-  div.cse111,
-  div.cse210,
-  div.wdd131,
-  div.wdd231 {
-    background: #fca311;
-    padding: 10px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin: 0 auto;
-    width: 80%;
-  }
-  
-  
   footer {
     background: #14213d;
     padding: 10px;
     text-align: center;
     grid-column: 1/ 4;
     color: aliceblue;
+    margin-top: 5px;
+    margin-bottom: 5px;
   
   }
   
