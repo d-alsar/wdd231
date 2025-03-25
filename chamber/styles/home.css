@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  
+  a#menu {
+    display: none;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  body {
+    font-weight: 400;
+    display: grid;
+    margin: 10px;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  header {
+    background: #e5e5e5;
+    padding: 0.5rem;
+    grid-column: 1/4;
+    text-align: center;
+    display: grid;
+    font-weight: 700;
+  }
+  
+  .navbar {
+    background: #e5e5e5;
+    padding: 2rem;
+    grid-column: 1/4;
+    text-align: center;
+  }
+  
+  footer {
+    background: #14213d;
+    padding: 10px;
+    text-align: center;
+    grid-column: 1/ 4;
+    color: aliceblue;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  
+  }
+  
+  /**New layout menu**/
+  
+  .navbar ul {
+    list-style-type: none;
+    background-color: #14213d;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    margin-bottom: -2rem;
+  }
+  
+  .navbar a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 15px;
+    display: flex;
+    text-align: center;
+  
+  }
+  
+  .navbar a:hover {
+    background-color: #fca311;
+    color: black;
+  }
+  
+  .navbar li {
+    float: right;
+    display: flex;
+    margin: auto;
+  }
+  
+  
+  main {
+    display: grid;
+    gap: 5px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  section.card-bottom, section.courses {
+    border: 2px solid #c9c4c4; /* Border color and thickness */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    padding: 20px; /* Space inside the section */
+    background-color: #c9c4c4; /* Background color */
+  
+  
+  }
+  
+  button {
+    border: none;          /* Removes the default border */
+    outline: none;         /* Removes the focus outline */
+    background-color: #14213d; /* Set the desired background color */
+    color: white;         /* Ensure text color contrasts */
+    padding: 10px 15px;    /* Add padding for better appearance */
+    cursor: pointer;       /* Change cursor to indicate it's clickable */
+    border-radius: 5px;    /* Optional: smooth rounded edges */
+  }
+  
+  button:focus, button:active {
+    outline: none;         /* Prevents focus outline */
+    box-shadow: none;      /* Removes any glow effect */
+  }
+  
+
+/* Default list view (stacked one below another) */
+#members-container {
+  display: flex;
+  flex-direction: column; /* List view by default */
+  gap: 1rem;
+}
+
+/* Grid view (3 columns) when toggled */
+.grid-view {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr; /* Responsive grid */
+  gap: 1rem;
+}
+
+/* Ensure all member cards are correctly displayed */
+.member-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#toggle-view-btn{
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100px;  /* Adjust size as needed */
+  height: 100px; /* Ensure it remains a square */
+  border-radius: 50%; /* Makes it a perfect circle */
+  object-fit: cover; /* Ensures the image covers the whole circular area */
+  display: block; /* Removes extra spacing */
+}
+
+
+
+
+  /* start of hero image css */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 100%;
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
+  }
+
+  /* end of hero image css */
+
+    /* start of weather card css */
+
+
+.card,.card2, .events {
+border: 1px solid #ccc;
+background-color: #f9f9f9;
+border-radius: 10px;
+text-align: center;
+display: grid;
+}
+
+.card h2 {
+    color: #14213d;
+    margin: .3rem 0;
+}
+
+.card #description{
+    text-transform: capitalize;
+    margin: .3rem 0;   
+}
+
+.card #temperature{
+    font-size: 2rem;
+    margin: .3rem 0;
+}
+
+.card #wind{
+    margin: .3rem 0;
+    font-size: .3rem 0;
+}
