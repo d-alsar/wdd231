@@ -109,3 +109,48 @@ function displayForecast(data) {
 
 // Call the function to fetch both data sets
 apiFetch();
+
+// This is for the spotlight section
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("data/members.json")
+        .then(response => response.json())
+        .then(members => {
+            // Filter Gold (3) & Silver (2) members
+            const eligibleMembers = members.filter(member => member.membership_level >= 2);
+
+            // Shuffle and select 3 random members
+            const shuffled = eligibleMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+            function createSpotlightCard(member) {
+                return `
+                    <div class="spotlight-card">
+                        <img src="images/${member.image}" alt="${member.name}" class="spotlight-img">
+                        <div class="spotlight-content">
+                            <h3>${member.name}</h3>
+                            <p><strong>Phone:</strong> ${member.phone}</p>
+                            <p><strong>Address:</strong> ${member.address}</p>
+                            <p><strong>Membership Level:</strong> ${member.membership_level === 3 ? 'Gold' : 'Silver'}</p>
+                            <a href="${member.website}" target="_blank" class="spotlight-btn">Visit Website</a>
+                        </div>
+                    </div>
+                `;
+            }
+
+            document.getElementById("business1").innerHTML = createSpotlightCard(shuffled[0]);
+            document.getElementById("business2").innerHTML = createSpotlightCard(shuffled[1]);
+            document.getElementById("business3").innerHTML = createSpotlightCard(shuffled[2]);
+        })
+        .catch(error => console.error("Error loading JSON:", error));
+});
+
+// THIS IS FOR THE HAMBURGER MENU
+
+const mainnav = document.querySelector('.navigation')
+const hambutton = document.querySelector('#menu');
+
+// Add a click event listender to the hamburger button and use a callback function that toggles the list element's list of classes.
+hambutton.addEventListener('click', () => {
+	mainnav.classList.toggle('show');
+	hambutton.classList.toggle('show');
+});

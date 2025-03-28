@@ -71,5 +71,27 @@ h2 {
     #toggle-view-btn{ 
         display: none;
     }
-}
+
+    .spotlights {
+        display: block;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+      }
+
+    section.temperature {
+        display: block;
+        padding: 20px;
+        margin-top: 10px;
+        justify-content: center;
+      }
+      
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        padding: 5px;
+      }
+    }
+
 

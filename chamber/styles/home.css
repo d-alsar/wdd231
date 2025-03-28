@@ -184,6 +184,14 @@
     transform: translate(-50%, -50%);
     color: white;
   }
+
+  div.hero-text {
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 97%; /* Full width */
+    padding: 20px; /* Some padding */
+  }
   
   .hero-text button {
     border: none;
@@ -205,6 +213,11 @@
 
     /* start of weather card css */
 
+img#weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
 
 .card,.card2, .events {
 border: 1px solid #ccc;
@@ -224,12 +237,89 @@ display: grid;
     margin: .3rem 0;   
 }
 
-.card #temperature{
+.card #temperature {
     font-size: 2rem;
+    margin: .3rem 0;
+}
+
+div.card2 {
+    color: #14213d;
+    font-size: 1.5rem;
     margin: .3rem 0;
 }
 
 .card #wind{
     margin: .3rem 0;
-    font-size: .3rem 0;
+}
+
+section.temperature {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Events takes 2x space, others equal */
+  gap: 20px; /* Adds space between columns */
+  padding: 20px;
+}
+
+.events {
+  background: #555;
+  color: #f1f1f1; /* Grey text */
+  padding: 20px; /* Some padding */
+}
+
+.card, .card2 {
+  background-color: lightblue; /* Just for visualization */
+  padding: 20px;
+}
+
+
+/* spotlight */
+.spotlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.spotlight-card {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.spotlight-card:hover {
+  transform: scale(1.05);
+}
+
+.spotlight-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.spotlight-content {
+  padding: 15px;
+}
+
+.spotlight-content h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.spotlight-content p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.spotlight-btn {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #0073e6;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
 }
