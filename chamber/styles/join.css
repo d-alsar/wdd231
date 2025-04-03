@@ -13,12 +13,13 @@ form {
     grid-column: 1;
 
     margin: 1rem 2%;
+}
 
-    .membership-options {
-      display: flex;
-      flex-direction: column;
-      gap: 12px; /* Adds spacing between each radio option */
-  }
+.membership-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Adds spacing between each radio option */
+}
   
   .radio-label {
       display: flex;
@@ -41,7 +42,7 @@ form {
       color: purple;
       padding-top: .2rem;
     }
-    h3 {
+    .membership-title  {
       font-size: .9rem;
       color: purple;
       margin: 1.5rem 0 .2rem 0;
@@ -81,7 +82,7 @@ form {
       -webkit-appearance: none;
       appearance: none;
     }
-  }
+  
   input:-webkit-autofill{
     -webkit-text-fill-color: #3D405B;
   }
