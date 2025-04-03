@@ -1,0 +1,41 @@
+[
+    {
+        "id": "np",
+        "title": "Non-Profit Membership",
+        "description": "Basic membership with free access to networking events.",
+        "benefits": [
+            "Free access to networking events",
+            "Monthly newsletter"
+        ]
+    },
+    {
+        "id": "bronze",
+        "title": "Bronze Membership",
+        "description": "Includes basic benefits plus training sessions.",
+        "benefits": [
+            "All Non-Profit benefits",
+            "Access to training sessions",
+            "Discounted tickets for events"
+        ]
+    },
+    {
+        "id": "silver",
+        "title": "Silver Membership",
+        "description": "Includes Bronze benefits + advertising perks.",
+        "benefits": [
+            "All Bronze benefits",
+            "Advertising on our website",
+            "Priority event registration"
+        ]
+    },
+    {
+        "id": "gold",
+        "title": "Gold Membership",
+        "description": "Premium benefits including event discounts and spotlights.",
+        "benefits": [
+            "All Silver benefits",
+            "Spotlight positions on homepage",
+            "VIP event discounts"
+        ]
+    }
+]
