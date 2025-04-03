@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber of Commerce thanks page</title>
+  <meta name="description" content="This is a website that contains a directory of chamber, you can find all contact information of the members.">
+
+  <meta property="og:title" content="directory of chamber">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://d-alsar.github.io/wdd231/chamber/directory.html">
+  <meta property="og:image" content="https://d-alsar.github.io/wdd231/chamber/images/volcano.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+
+  <meta name="author" content="Douglas R.Santos">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="styles/join-small.css">
+  <script src="scripts/join.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+
+    <div class="logo">
+      <img src="images/logo.webp" alt="logo">
+    </div>
+
+    <div class="name">
+      <h1 contenteditable> DALSAR SV</h1>
+      <p>Chamber of ecommerce</p>
+    </div>
+
+    <section class="navbar">
+      <a href="#" id="menu"></a>
+
+      <nav class="navbar">
+        <ul class="navigation">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <main>
+ <div class="thanks-container">
+        <section class="header-section">
+            <h1>Thank You for Joining!</h1>
+            <p>We appreciate your time and effort in filling out the form. Below is the information you submitted:</p>
+        </section>
+        
+        <div class="form-card">
+            <p><strong>First Name:</strong> <span id="firstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Cell Phone:</strong> <span id="phone"></span></p>
+            <p><strong>Business/Organization Name:</strong> <span id="organization"></span></p>
+            <p><strong>Submitted On:</strong> <span id="timestamp"></span></p>
+        </div>
+
+        <a href="index.html">Return to Homepage</a>
+    </div>
+
+    
+  </main>
+  <footer>
+    <p>
+      <span id="currentYear"></span> 🌎Douglas R. Santos 🌎 El Salvador
+    </p>
+
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>

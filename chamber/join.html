@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber of Commerce 
+    Join page</title>
+  <meta name="description" content="This is a website that contains a directory of chamber, you can find all contact information of the members.">
+
+  <meta property="og:title" content="directory of chamber">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://d-alsar.github.io/wdd231/chamber/directory.html">
+  <meta property="og:image" content="https://d-alsar.github.io/wdd231/chamber/images/volcano.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+
+  <meta name="author" content="Douglas R.Santos">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <link rel="stylesheet" href="styles/join-small.css">
+  <script src="scripts/join.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+
+    <div class="logo">
+      <img src="images/logo.webp" alt="logo">
+    </div>
+
+    <div class="name">
+      <h1 contenteditable> DALSAR SV</h1>
+      <p>Chamber of ecommerce</p>
+    </div>
+
+    <section class="navbar">
+      <a href="#" id="menu"></a>
+
+      <nav class="navbar">
+        <ul class="navigation">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <main>
+    <h1>Request to join Chamber of Commerce</h1>
+
+  <div class="container">
+
+    <form method="GET" action="thanks.html" class="designOne">
+      <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+        <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+        <label>Cell Phone <input type="tel" name="phone"  required autocomplete="tel" title="A Phone Number with dashes" placeholder="987-555-1234" ></label>
+        <label>Email <input type="email" name="email" required placeholder="john89@gmail.com"  title="Your Email" autocomplete="email"></label>
+        <label>Business/Organization Name <input type="text" name="organization" required autocomplete="organization" title="Your Business or Organization Name"></label>
+        <label>Organizational Title 
+          <input type="text" name="org_title" autocomplete="organization-title" title="Your Organizational Title" 
+                 pattern="^[A-Za-z\- ]{7,}$" placeholder="Senior Manager">
+        </label>
+        <label for="description">Business/Organization Description</label>
+        <textarea id="description" name="description" title="Describe your Business or Organization"></textarea>
+
+        <h3>Membership Level</h3>
+        <label><input type="radio" name="membership" value="NP membership" checked> Non profit membership</label>
+        <label><input type="radio" name="membership" value="Bronze"> Bronze membership</label>
+        <label><input type="radio" name="membership" value="Silver"> Silver membership</label>
+        <label><input type="radio" name="membership" value="Gold"> Gold Membership</label>
+
+
+        <input type="submit" value="Join Chamber of Commerce">
+      </form>
+        
+    <!-- Membership Cards (Dynamically Generated) -->
+    <div class="membership-cards" id="membershipCards"></div>
+    <div id="modalsContainer"></div>
+  </div>
+  
+  <!-- Modals Container -->
+ 
+    
+  </main>
+  <footer>
+    <p>
+      <span id="currentYear"></span> 🌎Douglas R. Santos 🌎 El Salvador
+    </p>
+
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>
