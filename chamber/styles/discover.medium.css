@@ -1,0 +1,17 @@
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    #allplaces div {
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: 
+        "name photograph"
+        "description description";
+    }
+
+  
+    .place-card img {
+      height: 100%;
+    }
+    
+    #allplaces {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  }

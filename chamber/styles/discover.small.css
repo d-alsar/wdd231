@@ -1,0 +1,109 @@
+@media screen and (max-width: 640px) {
+    #menu {
+        display: flex;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        background-color: #1d2d44;
+        color: #f0ebd8;
+        cursor: pointer;
+    }
+
+    #members-container  {
+        display: block;
+    }
+
+    a#menu {
+        display: block;
+      }
+
+    #menu::before {
+        content: "≡";
+    }
+
+    nav {
+        background-color: #1d2d44;
+    }
+
+    .navigation {
+        list-style: none;
+        margin: 0 auto;
+        max-width: 760px;
+        padding: 0;
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0.75rem;
+        text-align: left;
+        text-decoration: none;
+        color: #f0ebd8;
+        font-weight: 700;
+        transition: 0.5s;
+        font-size: clamp(1rem, 2vmin, 1.5rem);
+    }
+ul.navigation.show{
+    color: #f0ebd8;
+}
+
+h2 {
+    color: black;
+}
+    .navigation a:hover,
+    .navigation a:active {
+        color: #0d1321;
+        background-color: #748cab;
+    }
+
+    .show li {
+        display: block;
+    }
+
+    #menu.show::before {
+        content: "X";
+    }
+    
+    
+* {
+    box-sizing: border-box;
+
+}
+
+#allplaces div {
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: 
+    "name"
+    "photograph"
+    "description";
+}
+
+#allplaces div h2 {
+    margin:  1rem 10px;
+    grid-area: name;
+}
+
+#allplaces div img {
+    width: 100%;
+    grid-area: photograph;
+}
+
+#allplaces div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+}
+
+
+
