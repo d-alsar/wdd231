@@ -1,110 +1,110 @@
 * {
-    padding: 0;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0;
-    font-family: "Roboto Condensed", sans-serif;
-  }
-  
-  a#menu {
-    display: none;
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  body {
-    font-weight: 400;
-    display: grid;
-    margin: 10px;
-    max-width: 100%;
-    grid-template-columns: 1fr;
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  header {
-    background: #e5e5e5;
-    padding: 0.5rem;
-    grid-column: 1/4;
-    text-align: center;
-    display: grid;
-    font-weight: 700;
-  }
-  
-  .navbar {
-    background: #e5e5e5;
-    padding: 2rem;
-    grid-column: 1/4;
-    text-align: center;
-  }
-  
-  footer {
-    background: #14213d;
-    padding: 10px;
-    text-align: center;
-    grid-column: 1/ 4;
-    color: aliceblue;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  
-  }
-  
-  /**New layout menu**/
-  
-  .navbar ul {
-    list-style-type: none;
-    background-color: #14213d;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: -2rem;
-    margin-left: -2rem;
-    margin-bottom: -2rem;
-  }
-  
-  .navbar a {
-    color: aliceblue;
-    text-decoration: none;
-    padding: 15px;
-    display: flex;
-    text-align: center;
-  
-  }
-  
-  .navbar a:hover {
-    background-color: #fca311;
-    color: black;
-  }
-  
-  .navbar li {
-    float: right;
-    display: flex;
-    margin: auto;
-  }
-  
-  
-  main {
-    display: grid;
-    gap: 5px;
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-  
- 
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a#menu {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  font-weight: 400;
+  display: grid;
+  margin: 10px;
+  max-width: 100%;
+  grid-template-columns: 1fr;
+}
+
+h2 {
+  text-align: center;
+}
+
+header {
+  background: #e5e5e5;
+  padding: 0.5rem;
+  grid-column: 1/4;
+  text-align: center;
+  display: grid;
+  font-weight: 700;
+}
+
+.navbar {
+  background: #e5e5e5;
+  padding: 2rem;
+  grid-column: 1/4;
+  text-align: center;
+}
+
+footer {
+  background: #14213d;
+  padding: 10px;
+  text-align: center;
+  grid-column: 1/ 4;
+  color: aliceblue;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+/**New layout menu**/
+
+.navbar ul {
+  list-style-type: none;
+  background-color: #14213d;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -2rem;
+  margin-left: -2rem;
+  margin-bottom: -2rem;
+}
+
+.navbar a {
+  color: aliceblue;
+  text-decoration: none;
+  padding: 15px;
+  display: flex;
+  text-align: center;
+
+}
+
+.navbar a:hover {
+  background-color: #fca311;
+  color: black;
+}
+
+.navbar li {
+  float: right;
+  display: flex;
+  margin: auto;
+}
+
+
+main {
+  display: grid;
+  gap: 5px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
 
 .logo img {
-  width: 100px;  /* Adjust size as needed */
-  height: 100px; /* Ensure it remains a square */
-  border-radius: 50%; /* Makes it a perfect circle */
-  object-fit: cover; /* Ensures the image covers the whole circular area */
-  display: block; /* Removes extra spacing */
+width: 100px;  /* Adjust size as needed */
+height: 100px; /* Ensure it remains a square */
+border-radius: 50%; /* Makes it a perfect circle */
+object-fit: cover; /* Ensures the image covers the whole circular area */
+display: block; /* Removes extra spacing */
 }
 
 
@@ -114,10 +114,10 @@
 
 /* Grid container */
 .places-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 1.5rem;
+padding: 1rem;
 }
 
 /* Individual card styling + base grid layout */
@@ -126,6 +126,9 @@
   grid-template-areas:
     "name"
     "photograph"
+    "address"
+    "summary"
+    "button"
     "description";
   gap: 1rem;
   padding: 1rem;
@@ -137,49 +140,82 @@
   transition: transform 0.2s;
 }
 
-.place-card:hover {
-  transform: translateY(-5px);
-}
+.place-card h2 { grid-area: name; }
+.place-card img { grid-area: photograph; }
+.place-card .address { grid-area: address; }
+.place-card .summary { grid-area: summary; }
+.place-card .learn-more { grid-area: button; }
+.place-card .full-description { grid-area: description; }
+.hidden { display: none; }
+
+
+
+
 
 /* Grid area assignments */
 .place-card h2 {
-  grid-area: name;
-  margin: 0;
-  font-size: 1.25rem;
-  color: #333;
+grid-area: name;
+margin: 0;
+font-size: 1.25rem;
+color: #333;
 }
 
 .place-card img {
-  grid-area: photograph;
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-  border-radius: 0.5rem;
+grid-area: photograph;
+width: 100%;
+height: 200px;
+object-fit: cover;
+display: block;
+border-radius: 0.5rem;
 }
 
 .place-card p {
-  grid-area: description;
-  margin: 0;
-  font-size: 0.95rem;
-  color: #555;
+grid-area: description;
+margin: 0;
+font-size: 0.95rem;
+color: #555;
 }
 
 @media screen and (min-width: 1025px) {
-  #allplaces div {
-    grid-template-columns: 2fr 3fr;
-    grid-template-areas: 
+  .place-card {
+    display: grid;
+    grid-template-areas:
       "photograph photograph"
-      " name name"
+      "name name"
+      "address address"
+      "summary summary"
+      "button button"
       "description description";
+    grid-template-columns: 1fr 1fr;
   }
-
   #allplaces div img {
     height: 100%;
   }
-
+  
   #allplaces {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+
+  .place-card img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .place-card img:hover {
+    transform: scale(1.05);
+  }
   
+  .place-card:hover {
+    transform: translateY(-5px);
+    }
+}
+
+
+.visit-info {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  margin: 1rem;
+  border-left: 4px solid #1d2d44;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+

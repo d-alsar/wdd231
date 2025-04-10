@@ -1,17 +1,74 @@
 @media screen and (min-width: 641px) and (max-width: 1024px) {
-    #allplaces div {
-      grid-template-columns: 1fr 2fr;
-      grid-template-areas: 
-        "name photograph"
-        "description description";
-    }
-
-  
-    .place-card img {
-      height: 100%;
-    }
-    
-    #allplaces {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  #allplaces {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
+
+  #allplaces div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+      "photograph name"
+      "photograph address"
+      "photograph summary"
+      "photograph button"
+      "photograph description";
+    gap: 0.5rem;
+    align-items: start;
+  }
+
+  .place-card h2 {
+    grid-area: name;
+    margin: 0.5rem;
+  }
+
+  .place-card img {
+    grid-area: photograph;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+
+  .place-card .address {
+    grid-area: address;
+    margin: 0.5rem;
+  }
+
+  .place-card .summary {
+    grid-area: summary;
+    margin: 0.5rem;
+  }
+
+  .place-card .learn-more {
+    grid-area: button;
+    margin: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #1d2d44;
+    color: #f0ebd8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .place-card .full-description {
+    grid-area: description;
+    margin: 0.5rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .place-card img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .place-card img:hover {
+    transform: scale(1.05);
+  }
+
+  .place-card:hover {
+    transform: translateY(-5px);
+    }
+}
