@@ -1,148 +1,141 @@
-@media screen and (max-width: 640px) {
+
+  @media screen and (max-width: 640px) {
     #menu {
-        display: flex;
-        font-size: 2rem;
-        font-weight: 700;
-        text-decoration: none;
-        padding: 0.5rem 0.75rem;
-        background-color: #1d2d44;
-        color: #f0ebd8;
-        cursor: pointer;
+      display: flex;
+      font-size: 2rem;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      background-color: #1d2d44;
+      color: #f0ebd8;
+      cursor: pointer;
+  }
+
+  #members-container  {
+      display: block;
+  }
+
+  a#menu {
+      display: block;
     }
 
-    #members-container {
-        display: block;
-    }
+  #menu::before {
+      content: "≡";
+  }
 
-    a#menu {
-        display: block;
-    }
+  nav {
+      background-color: #1d2d44;
+  }
 
-    #menu::before {
-        content: "≡";
-    }
+  .navigation {
+      list-style: none;
+      margin: 0 auto;
+      max-width: 760px;
+      padding: 0;
+  }
 
-    nav {
-        background-color: #1d2d44;
-    }
+  .navigation li {
+      display: none;
+  }
 
-    .navigation {
-        list-style: none;
-        margin: 0 auto;
-        max-width: 760px;
-        padding: 0;
-    }
-
-    .navigation li {
-        display: none;
-    }
-
-    .navigation a {
-        display: block;
-        padding: 0.75rem;
-        text-align: left;
-        text-decoration: none;
-        color: #f0ebd8;
-        font-weight: 700;
-        transition: 0.5s;
-        font-size: clamp(1rem, 2vmin, 1.5rem);
-    }
-
-    ul.navigation.show {
-        color: #f0ebd8;
-    }
-
-    h2 {
-        color: black;
-    }
-
-    .navigation a:hover,
-    .navigation a:active {
-        color: #0d1321;
-        background-color: #748cab;
-    }
-
-    .show li {
-        display: block;
-    }
-
-    #menu.show::before {
-        content: "X";
-    }
-
-
-    * {
-        box-sizing: border-box;
-
-    }
-
-    #allplaces div {
-        display: grid;
-        grid-template-areas:
-          "name"
-          "photograph"
-          "address"
-          "summary"
-          "button"
-          "description";
-      
-        grid-template-rows: auto auto auto auto auto auto;
-        margin: 1rem 8px;
-        border: 1px solid #999;
-        background-color: #eee;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      
-      #allplaces div h2 {
-        grid-area: name;
-        margin: 1rem 10px;
-      }
-      
-      #allplaces div img {
-        grid-area: photograph;
-        width: 100%;
-      }
-      
-      #allplaces div .address {
-        grid-area: address;
-        margin: 0.5rem 10px;
-      }
-      
-      #allplaces div .summary {
-        grid-area: summary;
-        margin: 0.5rem 10px;
-      }
-      
-      #allplaces div .learn-more {
-        grid-area: button;
-        margin: 0.5rem 10px;
-        padding: 0.4rem 0.8rem;
-        background-color: #1d2d44;
-        color: #f0ebd8;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      
-      #allplaces div .full-description {
-        grid-area: description;
-        margin: 0.5rem 10px;
-      }
-      
-      .hidden {
-        display: none;
-      }
-      
-
+  .navigation a {
+      display: block;
+      padding: 0.75rem;
+      text-align: left;
+      text-decoration: none;
+      color: #f0ebd8;
+      font-weight: 700;
+      transition: 0.5s;
+      font-size: clamp(1rem, 2vmin, 1.5rem);
+  }
+ul.navigation.show{
+  color: #f0ebd8;
 }
 
-.place-card img {
-    transition: transform 0.3s ease-in-out;
+h2 {
+  color: black;
+}
+  .navigation a:hover,
+  .navigation a:active {
+      color: #0d1321;
+      background-color: #748cab;
   }
 
-  .place-card img:hover {
-    transform: scale(1.05);
+  .show li {
+      display: block;
+  }
+
+  #menu.show::before {
+      content: "X";
+  }
+
+  #toggle-view-btn{ 
+      display: none;
   }
 
 
+  * {
+    box-sizing: border-box;
+
+  }
+
+  #allplaces div {
+    display: grid;
+    grid-template-areas:
+      "name"
+      "photograph"
+      "address"
+      "summary"
+      "button"
+      "description";
+
+    grid-template-rows: auto auto auto auto auto auto;
+    margin: 1rem 8px;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  #allplaces div h2 {
+    grid-area: name;
+    margin: 1rem 10px;
+  }
+
+  #allplaces div img {
+    grid-area: photograph;
+    width: 100%;
+  }
+
+  #allplaces div .address {
+    grid-area: address;
+    margin: 0.5rem 10px;
+  }
+
+  #allplaces div .summary {
+    grid-area: summary;
+    margin: 0.5rem 10px;
+  }
+
+  #allplaces div .learn-more {
+    grid-area: button;
+    margin: 0.5rem 10px;
+    padding: 0.4rem 0.8rem;
+    background-color: #1d2d44;
+    color: #f0ebd8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #allplaces div .full-description {
+    grid-area: description;
+    margin: 0.5rem 10px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+
+}

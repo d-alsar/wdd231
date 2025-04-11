@@ -1,3 +1,4 @@
+
 import { places } from '../data/places.mjs';
 
 const showHere = document.querySelector("#allplaces");
@@ -8,7 +9,7 @@ places.forEach(place => {
 
   card.innerHTML = `
     <h2>${place.name}</h2>
-    <img src="${place.imageUrl}" alt="${place.name}">
+    <img src="${place.imageUrl}" alt="${place.name}" loading="lazy">
     <p class="address"><strong>Address:</strong><br>${place.address}</p>
     <p class="summary"><strong>Summary:</strong><br>${place["short-description"]}</p>
     <button class="learn-more">Learn More</button>
@@ -29,19 +30,6 @@ places.forEach(place => {
 
 
 
-
-
-
-
-
-const mainnav = document.querySelector('.navigation')
-const hambutton = document.querySelector('#menu');
-
-// Add a click event listender to the hamburger button and use a callback function that toggles the list element's list of classes.
-hambutton.addEventListener('click', () => {
-  mainnav.classList.toggle('show');
-  hambutton.classList.toggle('show');
-});
 
 
 // This code gets the current year and adds it to the span element with the id "currentYear"
@@ -95,3 +83,15 @@ if (!lastVisit) {
 
 // Store current time as the latest visit
 localStorage.setItem('lastVisit', now.toString());
+
+
+// THIS IS FOR THE HAMBURGER MENU
+
+const mainnav = document.querySelector('.navigation')
+const hambutton = document.querySelector('#menu');
+
+// Add a click event listender to the hamburger button and use a callback function that toggles the list element's list of classes.
+hambutton.addEventListener('click', () => {
+	mainnav.classList.toggle('show');
+	hambutton.classList.toggle('show');
+});
