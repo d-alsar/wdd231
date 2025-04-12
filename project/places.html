@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Project</title>
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Site plan.">
+  <script defer src="scripts/unveiled.js"></script>
+
+  <meta name="author" content="Douglas R.Santos">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/unveiled-normal.css">
+  <link rel="stylesheet" href="styles/unveiled-small.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <img src="images/eyes-logo.png" alt="eyes-logo">
+      <a class="logo">Unveiled Folklore</a>
+
+
+
+      <div class="header-right">
+        <a class="active" href="unveiled-folklore.html">Home</a>
+        <a href="haunted-places.html">Haunted places</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </header>
+  <main>
+
+
+    <div style="padding-left:20px">
+      <h1>Haunted places</h1>
+      <hr>
+    </div>
+
+    <div class="container">
+      <section>
+        <div class="legends">
+          <h2>Guirolas's House</h2>
+          <figure>
+            <picture>
+              <source srcset="images/house-large.webp" media="(min-width: 1000px)">
+              <source srcset="images/house-medium.webp" media="(min-width: 500px)">
+              <img src="images/house-small.webp" alt="La siguanaba spirit" width="500" height="250">
+            </picture>
+            <figcaption>The Guirola House has become a significant part of Salvadoran folklore, symbolizing mystery,
+              tragedy, and the supernatural.</figcaption>
+          </figure>
+        </div>
+        <button class="collapsible">Read more</button>
+        <div class="content">
+          <p>The Guirola House, located in Santa Ana, El Salvador, is one of the country’s most infamous haunted
+            locations. Built in the early 20th century by the wealthy Guirola family, the mansion became shrouded in
+            mystery due to its opulent yet eerie architecture and the tragedies associated with its history.
+
+            The story goes that the Guirola family practiced occult rituals and dark magic within the mansion, resulting
+            in supernatural occurrences including:
+          </p>
+          <p>Unexplainable Noises: Footsteps, whispers, and laughter echoing in empty halls.</p>
+          <p>Apparitions: Ghostly figures, often thought to be members of the Guirola family or servants, are said to
+            roam the premises.</p>
+          <p>Poltergeist Activity: Objects moving on their own, doors slamming, and lights flickering.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Poza El Susto, Cerro El Brujo: A Mystical place</h2>
+        <div class="legends">
+          <figure>
+            <picture>
+              <source srcset="images/lake-large.webp" media="(min-width: 1000px)">
+              <source srcset="images/lake-medium.webp" media="(min-width: 500px)">
+              <img src="images/lake-small.webp" alt="El cipitio childlike appearance" width="500" height="250"
+                loading="lazy">
+            </picture>
+            <figcaption>This enigmatic location is steeped in local folklore and is a magnet for thrill-seekers, nature
+              lovers, and those fascinated by the supernatural.</figcaption>
+          </figure>
+        </div>
+        <button class="collapsible">Read more</button>
+        <div class="content">
+          <p>The name "El Susto" (The Fright) comes from the chilling tales surrounding the pool. Locals say it’s cursed,
+            and those who swim in its waters risk being pulled under by unseen forces. According to legend, the pool is
+            guarded by a mystical entity, often described as a malevolent spirit or a shape-shifting witch. This
+            guardian is said to trap unwary visitors, especially those who disrespect the land.
+
+            Another version of the tale speaks of a young woman who drowned there after being deceived by a lover. Her
+            spirit is said to haunt the pool, crying out for revenge and pulling swimmers down to join her watery grave.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>La Sirena de Santa Alegría: Usulutan</h2>
+        <div class="legends">
+          <figure>
+            <picture>
+              <source srcset="images/mermaid-large.webp" media="(min-width: 1000px)">
+              <source srcset="images/mermaid-medium.webp" media="(min-width: 500px)">
+              <img src="images/mermaid-small.webp" alt="El cadejo dog like form" width="500" height="250" loading="lazy">
+            </picture>
+            <figcaption>This mythical figure has haunted the lake’s reputation for centuries, drawing visitors intrigued
+              by its beauty and its eerie tales.</figcaption>
+          </figure>
+        </div>
+        <button class="collapsible">Read more</button>
+        <div class="content">
+          <p>According to local folklore, the lake is home to a mermaid-like spirit, often described as a beautiful
+            woman with long flowing hair. She is said to emerge from the water to seduce unsuspecting men with her
+            enchanting voice and stunning appearance. However, those who fall under her spell are doomed—they are either
+            dragged into the lake's depths or disappear mysteriously.
+
+            Some versions of the story claim that La Sirena is the cursed soul of a woman who tragically died at the
+            lake. Her spirit now seeks vengeance, luring victims to join her in her eternal watery prison.</p>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+  <footer>
+    <p>
+      <span id="currentYear"></span> 🌎Douglas R. Santos 🌎 El Salvador
+    </p>
+
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+
+</html>

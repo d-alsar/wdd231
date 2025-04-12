@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Libre Baskerville", serif;
+    margin: 0;
+  }
+  
+  .header,
+  footer {
+    overflow: hidden;
+    background-color: #181818;
+    padding: 20px 10px;
+    font-family: 'Cinzel', "serif";
+  }
+  
+  footer {
+    color: white;
+    text-align: center;
+  }
+  
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .header a.active {
+    background-color: #381820;
+    color: white;
+  }
+  
+  .header-right {
+    float: right;
+  }
+  
+
+  
+  section p {
+    text-align: left;
+  }
+  
+  
+  h1 {
+    text-align: center;
+  }
+  
+
+  
+  
+
+  
+
+
+  @media screen and (min-width: 1024px) {
+    #cards-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card {
+      grid-template-areas:
+        "image image"
+        "title title"
+        "fee fee"
+        "button button";
+    }
+  }
+
+
+/* Area assignments */
+.card-title {
+  grid-area: title;
+  margin: 0;
+}
+
+.card-image {
+  grid-area: image;
+  width: 100%;
+  height: 300px; /* Or whatever height fits your design */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-fee {
+  grid-area: fee;
+  margin: 0.5em 0;
+  font-weight: bold;
+}
+
+.card-button {
+  grid-area: button;
+  padding: 0.5em 1em;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-details {
+  grid-column: span 2;
+}

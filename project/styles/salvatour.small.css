@@ -1,0 +1,88 @@
+@media screen and (max-width: 640px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  
+    .header-right {
+      float: none;
+    }
+  
+    .center-section {
+      display: block;
+      padding: 20px;
+      /* Optional for spacing */
+      margin: 10px 100px;
+      width: 400px;
+      height: 750px;
+  
+      ;
+    }
+    .card {
+      grid-template-areas:
+        "title"
+        "image"
+        "fee"
+        "button";
+
+        
+    }
+    
+    #cards-container {
+      display: grid;
+      grid-auto-rows: auto; /* ✅ ensures rows size to content properly */
+    }
+
+    
+    .card {
+      max-width: 100% !important;
+    } 
+  
+  }
+
+  #cards-container {
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+  }
+  
+  /* Card layout: each card is a grid */
+  .card {
+    display: grid;
+    gap: 0.5em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: white;
+  }
+
+  #category-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin: 1.5em 0;
+  }
+  
+  #category-filters button {
+    padding: 0.5em 1.2em;
+    border: none;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #category-filters button:hover {
+    background-color: #d0d0d0;
+  }
+  
+  #category-filters button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
