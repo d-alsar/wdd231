@@ -38,6 +38,11 @@
     .card {
       max-width: 100% !important;
     } 
+
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
   
   }
 
@@ -82,7 +87,7 @@
   }
   
   #category-filters button.active {
-    background-color: #007bff;
+    background-color: #381820;
     color: white;
   }
   

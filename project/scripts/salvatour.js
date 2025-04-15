@@ -19,6 +19,7 @@ function renderCards(filteredPlaces) {
     img.src = place.image_url;
     img.alt = place.name;
     img.className = 'card-image';
+    img.loading = 'lazy'; // <-- Lazy loading enabled
     card.appendChild(img);
 
     const title = document.createElement('h3');
@@ -60,6 +61,7 @@ function renderCards(filteredPlaces) {
     container.appendChild(card);
   });
 }
+
 
 // Initial load
 renderCards(places);

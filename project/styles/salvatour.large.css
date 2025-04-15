@@ -106,7 +106,7 @@
   grid-area: button;
   padding: 0.5em 1em;
   border: none;
-  background: #007bff;
+  background: #381820;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -114,4 +114,90 @@
 
 .card-details {
   grid-column: span 2;
+}
+
+/* ---------------------FORM STYLE---------------------------------- */
+
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.thanks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+.form-card {
+  background-color: #fff8dc;
+  border: 2px solid #3D405B;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+
+.visit-info {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  margin: 1rem;
+  border-left: 4px solid #381820;
+  font-style: italic;
+  font-size: 0.95rem;
 }

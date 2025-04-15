@@ -4,19 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SalvaTour</title>
+  <title>Website Project</title>
   <meta name="description" content="This is website that contains touristic places in El Salvador.">
+  <script src="scripts/salvatour.js" type="module"></script>
+
   <meta name="author" content="Douglas R.Santos">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-  <meta property="og:title" content="SalvaTour">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://d-alsar.github.io/wdd231/project/salvatour.html">
-  <meta property="og:image" content="https://d-alsar.github.io/wdd231/project/images/volcan.webp">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
@@ -27,7 +19,7 @@
   <link rel="stylesheet" href="styles/salvatour.small.css">
   <link rel="stylesheet" href="styles/salvatour.medium.css">
   <link rel="stylesheet" href="styles/salvatour.large.css">
-  <script src="scripts/salvatour.js" type="module"></script>
+
 </head>
 
 <body>
@@ -50,20 +42,50 @@
   <main>
 
 
-    <div style="padding-left:20px">
-      <h1>Beautiful places</h1>
-      <hr>
-    </div>
-
-    <div id="category-filters">
-      <button data-category="all">All</button>
-      <button data-category="restaurant">Restaurants</button>
-      <button data-category="hiking">Hiking</button>
-      <button data-category="water park">Water Parks</button>
-    </div>
+    <div class="container">
+        <form action="thanks.html">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
     
-    <div id="cards-container"></div>
-
     <aside>
         <div id="visitMessage" class="visit-info"></div>
       </aside>

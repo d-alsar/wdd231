@@ -4,19 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SalvaTour</title>
+  <title>Website Project</title>
   <meta name="description" content="This is website that contains touristic places in El Salvador.">
+  <script src="scripts/salvatour.js" type="module"></script>
+
   <meta name="author" content="Douglas R.Santos">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-  <meta property="og:title" content="SalvaTour">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://d-alsar.github.io/wdd231/project/salvatour.html">
-  <meta property="og:image" content="https://d-alsar.github.io/wdd231/project/images/volcan.webp">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
@@ -27,7 +19,7 @@
   <link rel="stylesheet" href="styles/salvatour.small.css">
   <link rel="stylesheet" href="styles/salvatour.medium.css">
   <link rel="stylesheet" href="styles/salvatour.large.css">
-  <script src="scripts/salvatour.js" type="module"></script>
+
 </head>
 
 <body>
@@ -49,20 +41,23 @@
 
   <main>
 
+    <div class="thanks-container">
+        <section class="header-section">
+            <h1>Thank You for Joining!</h1>
+            <p>We appreciate your time and effort in filling out the form. Below is the information you submitted:</p>
+        </section>
+        
+        <div class="form-card">
+            <p><strong>First Name:</strong> <span id="firstName"></span></p>
+            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Cell Phone:</strong> <span id="phone"></span></p>
+            <p><strong>Business/Organization Name:</strong> <span id="organization"></span></p>
+            <p><strong>Submitted On:</strong> <span id="timestamp"></span></p>
+        </div>
 
-    <div style="padding-left:20px">
-      <h1>Beautiful places</h1>
-      <hr>
-    </div>
+        <a href="salvatour.html">Return to Homepage</a>
 
-    <div id="category-filters">
-      <button data-category="all">All</button>
-      <button data-category="restaurant">Restaurants</button>
-      <button data-category="hiking">Hiking</button>
-      <button data-category="water park">Water Parks</button>
-    </div>
-    
-    <div id="cards-container"></div>
 
     <aside>
         <div id="visitMessage" class="visit-info"></div>
