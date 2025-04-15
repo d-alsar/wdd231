@@ -62,10 +62,6 @@
   }
   
 
-  
-  
-
-  
 
 
   @media screen and (min-width: 1024px) {
@@ -136,7 +132,7 @@ label {
 
 /* Style the submit button */
 input[type=submit] {
-  background-color: #04AA6D;
+  background-color: #381820;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -201,3 +197,18 @@ input[type=submit] {
   font-style: italic;
   font-size: 0.95rem;
 }
+
+/* Default style for required fields */
+textarea[required]:invalid {
+  border-left: 2px solid red; /* Red border for required fields that are not filled */
+}
+
+textarea[required]:valid {
+  border-left: 2px solid green; 
+}
+
+label[for="subject"]:after {
+  content: " *"; 
+  color: red;
+}
+

@@ -4,11 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Project</title>
-  <meta name="description" content="This is website that contains touristic places in El Salvador.">
-  <script src="scripts/salvatour.js" type="module"></script>
-
+  <title>SalvaTour Feedback</title>
+  <meta name="description" content="You can send us your feedback about the website or places you would like us to post in the page.">
   <meta name="author" content="Douglas R.Santos">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="SalvaTour">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://d-alsar.github.io/wdd231/project/salvatour.html">
+  <meta property="og:image" content="https://d-alsar.github.io/wdd231/project/images/volcan.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
@@ -19,17 +27,19 @@
   <link rel="stylesheet" href="styles/salvatour.small.css">
   <link rel="stylesheet" href="styles/salvatour.medium.css">
   <link rel="stylesheet" href="styles/salvatour.large.css">
-
+  <script src="scripts/salvatour.js" type="module"></script>
 </head>
 
 <body>
   <header>
     <div class="header">
-      <img src="images/eyes-logo.png" alt="eyes-logo">
-      <a class="logo">SalvaTour</a>
-
-
-
+      <a class="logo" href="salvatour.html">
+        <img src="images/salvatour-logo.webp" alt="SalvaTour logo" width="50" height="50">
+        SalvaTour
+      </a>
+    
+      <button id="menu" class="hamburger" aria-label="Toggle menu"></button>
+    
       <div class="header-right">
         <a class="active" href="salvatour.html">Home</a>
         <a href="places.html">Places</a>
@@ -37,56 +47,98 @@
         <a href="about.html">About</a>
       </div>
     </div>
-  </header>
+      
+    </header>
 
   <main>
-
+    <div style="padding-left:20px" >
+      <h1>Share your feedback or suggestions</h1>
+      <p>We appreciate your feedback! Please fill out the form below to share your thoughts or suggestions with us.</p>
+      <hr>
+    </div>
 
     <div class="container">
-        <form action="thanks.html">
-          <div class="row">
-            <div class="col-25">
-              <label for="fname">First Name</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            </div>
+      <form action="thanks.html" method="GET" onsubmit="saveFormData(event)">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
           </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="lname">Last Name</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
           </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="country">Country</label>
-            </div>
-            <div class="col-75">
-              <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-              </select>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
           </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="subject">Subject</label>
-            </div>
-            <div class="col-75">
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-            </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
           </div>
-          <div class="row">
-            <input type="submit" value="Submit">
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="country">Department</label>
           </div>
-        </form>
-      </div>
+          <div class="col-75">
+            <select id="department" name="department" required>
+              <option value="ahuachapan">Ahuachapán</option>
+              <option value="santa_ana">Santa Ana</option>
+              <option value="sonsonate">Sonsonate</option>
+              <option value="chalatenango">Chalatenango</option>
+              <option value="la_libertad">La Libertad</option>
+              <option value="san_salvador">San Salvador</option>
+              <option value="cuscatlan">Cuscatlán</option>
+              <option value="la_paz">La Paz</option>
+              <option value="cabañas">Cabañas</option>
+              <option value="san_vicente">San Vicente</option>
+              <option value="usulutan">Usulután</option>
+              <option value="san_miguel">San Miguel</option>
+              <option value="morazan">Morazán</option>
+              <option value="la_union">La Unión</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Send feedback">
+        </div>
+      </form>
+  </div>
+  
+  <script>
+    function saveFormData(event) {
+      event.preventDefault();  // Prevent form submission
+      
+      // Get form values
+      const firstName = document.getElementById('fname').value;
+      const lastName = document.getElementById('lname').value;
+      const department = document.getElementById('department').value;
+      const subject = document.getElementById('subject').value;
+  
+      // Get current date and time for submission timestamp
+      const timestamp = new Date().toLocaleString();
+  
+      // Store the data in localStorage (or use sessionStorage for session-only data)
+      localStorage.setItem('firstName', firstName);
+      localStorage.setItem('lastName', lastName);
+      localStorage.setItem('department', department);
+      localStorage.setItem('subject', subject);
+      localStorage.setItem('timestamp', timestamp);
+  
+      // Redirect to thanks page
+      window.location.href = 'thanks.html';
+    }
+  </script>
+  
     
-    <aside>
+      <aside>
         <div id="visitMessage" class="visit-info"></div>
       </aside>
   </main>

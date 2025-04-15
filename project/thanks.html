@@ -4,11 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Project</title>
-  <meta name="description" content="This is website that contains touristic places in El Salvador.">
-  <script src="scripts/salvatour.js" type="module"></script>
-
+  <title>SalvaTour Feedback</title>
+  <meta name="description" content="You can send us your feedback about the website or places you would like us to post in the page.">
   <meta name="author" content="Douglas R.Santos">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="SalvaTour">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://d-alsar.github.io/wdd231/project/salvatour.html">
+  <meta property="og:image" content="https://d-alsar.github.io/wdd231/project/images/volcan.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
@@ -19,17 +27,19 @@
   <link rel="stylesheet" href="styles/salvatour.small.css">
   <link rel="stylesheet" href="styles/salvatour.medium.css">
   <link rel="stylesheet" href="styles/salvatour.large.css">
-
+  <script src="scripts/salvatour.js" type="module"></script>
 </head>
 
 <body>
   <header>
     <div class="header">
-      <img src="images/eyes-logo.png" alt="eyes-logo">
-      <a class="logo">SalvaTour</a>
-
-
-
+      <a class="logo" href="salvatour.html">
+        <img src="images/salvatour-logo.webp" alt="SalvaTour logo" width="50" height="50">
+        SalvaTour
+      </a>
+    
+      <button id="menu" class="hamburger" aria-label="Toggle menu"></button>
+    
       <div class="header-right">
         <a class="active" href="salvatour.html">Home</a>
         <a href="places.html">Places</a>
@@ -37,31 +47,28 @@
         <a href="about.html">About</a>
       </div>
     </div>
-  </header>
+      
+    </header>
 
   <main>
 
     <div class="thanks-container">
         <section class="header-section">
-            <h1>Thank You for Joining!</h1>
+            <h1>Thank you for sharing your suggestions!</h1>
             <p>We appreciate your time and effort in filling out the form. Below is the information you submitted:</p>
         </section>
         
         <div class="form-card">
-            <p><strong>First Name:</strong> <span id="firstName"></span></p>
-            <p><strong>Last Name:</strong> <span id="lastName"></span></p>
-            <p><strong>Email:</strong> <span id="email"></span></p>
-            <p><strong>Cell Phone:</strong> <span id="phone"></span></p>
-            <p><strong>Business/Organization Name:</strong> <span id="organization"></span></p>
-            <p><strong>Submitted On:</strong> <span id="timestamp"></span></p>
+          <p><strong>First Name:</strong> <span id="firstName"></span></p>
+          <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+          <p><strong>Department:</strong> <span id="department"></span></p>
+          <p><strong>Subject:</strong> <span id="subject"></span></p>
+          <p><strong>Submitted On:</strong> <span id="timestamp"></span></p>
         </div>
 
         <a href="salvatour.html">Return to Homepage</a>
 
 
-    <aside>
-        <div id="visitMessage" class="visit-info"></div>
-      </aside>
   </main>
   <footer>
     <p>
