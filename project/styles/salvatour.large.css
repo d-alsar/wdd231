@@ -1,82 +1,88 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  body{
-    font-family: "Libre Baskerville", serif;
-    margin: 0;
- 
-  }
-  
-  .header,
-  footer {
-    overflow: hidden;
-    background-color: #181818;
-    padding: 20px 10px;
-    font-family: 'Cinzel', "serif";
-  }
-  
-  footer {
-    color: white;
-    text-align: center;
-  }
-  
-  .header a {
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-  }
-  
-  .header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-  .header a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .header a.active {
-    background-color: #381820;
-    color: white;
-  }
-  
-  .header-right {
-    float: right;
-  }
-  
+  box-sizing: border-box;
+}
 
-  
-  section p {
-    text-align: left;
-  }
-  
-  
-  h1 {
-    text-align: center;
-  }
-  
+body {
+  font-family: "Libre Baskerville", serif;
+  margin: 0;
+
+}
+
+.header,
+footer {
+  overflow: hidden;
+  background-color: #181818;
+  padding: 20px 10px;
+  font-family: 'Cinzel', "serif";
+}
+
+footer {
+  color: white;
+  text-align: center;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: #381820;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
 
 
 
-  @media screen and (min-width: 1024px) {
-    #cards-container {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    .card {
-      grid-template-areas:
-        "image image"
-        "title title"
-        "fee fee"
-        "button button";
-    }
+section p {
+  text-align: left;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+  #cards-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .card {
+    grid-template-areas:
+      "image image"
+      "title title"
+      "fee fee"
+      "button button";
+  }
+
+  .gems-cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
 
 
 /* Area assignments */
@@ -88,7 +94,8 @@
 .card-image {
   grid-area: image;
   width: 100%;
-  height: 300px; /* Or whatever height fits your design */
+  height: 300px;
+  /* Or whatever height fits your design */
   object-fit: cover;
   border-radius: 10px;
 }
@@ -116,7 +123,9 @@
 /* ---------------------FORM STYLE---------------------------------- */
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
+input[type=text],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -201,15 +210,16 @@ input[type=submit] {
 
 /* Default style for required fields */
 textarea[required]:invalid {
-  border-left: 2px solid red; /* Red border for required fields that are not filled */
+  border-left: 2px solid red;
+  /* Red border for required fields that are not filled */
 }
 
 textarea[required]:valid {
-  border-left: 2px solid green; 
+  border-left: 2px solid green;
 }
 
 label[for="subject"]:after {
-  content: " *"; 
+  content: " *";
   color: red;
 }
 
@@ -228,7 +238,7 @@ label[for="subject"]:after {
   margin: 0;
 }
 
-img.hero-img{
+img.hero-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -246,14 +256,19 @@ img.hero-img{
 }
 
 div.hero-text {
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  padding: 20px; /* Some padding */
+  background: rgb(0, 0, 0);
+  /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  /* Grey text */
+  width: 100%;
+  /* Full width */
+  padding: 20px;
+  /* Some padding */
 }
 
-.hero-text button {
+.hero-button {
   border: none;
   outline: 0;
   display: inline-block;
@@ -262,9 +277,160 @@ div.hero-text {
   background-color: #ddd;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
+  /* Remove underline */
 }
 
-.hero-text button:hover {
+.hero-button:hover {
   background-color: #555;
   color: white;
+}
+
+
+
+
+
+
+
+/* Basic styles for the modal and cards */
+
+
+.gems-card {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.gems-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.gems-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.gems-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.gems-close {
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.gems-card {
+  width: 100%;
+  /* Let it fill the grid column */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gems-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  gap: 40px;
+  background-color: #fdf8f3;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  width: 500px;
+  /* Define a fixed width */
+  height: 300px;
+  /* Define a fixed height */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Text section styling */
+.center-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.about {
+  max-width: 800px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #3b2e2e;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Responsive layout for larger screens */
+@media screen and (min-width: 1024px) {
+  .about-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .about-image,
+  .center-section {
+    flex: 1;
+  }
+
+  .about-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+button.button {
+  padding: 0.5em 1em;
+  border: none;
+  background: #381820;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }

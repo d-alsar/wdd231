@@ -6,7 +6,8 @@
   padding: 0.5em 1em;
   background-color: #181818;
   color: white;
-  flex-wrap: wrap; /* ✅ allow wrapping */
+  flex-wrap: wrap;
+  /* ✅ allow wrapping */
 }
 
 .header .logo {
@@ -59,7 +60,9 @@
     max-width: 100% !important;
   }
 
-  .col-25, .col-75, input[type=submit] {
+  .col-25,
+  .col-75,
+  input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
@@ -74,40 +77,40 @@
     float: none;
   }
 
-    /* ✅ Stack nav links vertically */
-    .header-right {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 10px;
-    }
-  
-    .header-right.show {
-      display: flex;
-    }
-  
-    .header-right a {
-      padding: 10px 0;
-      border-top: 1px solid #444;
-      text-align: left;
-      color: white;
-      width: 100%;
-    }
-  
-    /* ✅ Keep logo and hamburger on the same line */
-    .header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .header .logo {
-      flex: 1;
-    }
-  
-    .hamburger {
-      display: block;
-      align-self: flex-end;
-    }
+  /* ✅ Stack nav links vertically */
+  .header-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .header-right.show {
+    display: flex;
+  }
+
+  .header-right a {
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    text-align: left;
+    color: white;
+    width: 100%;
+  }
+
+  /* ✅ Keep logo and hamburger on the same line */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .logo {
+    flex: 1;
+  }
+
+  .hamburger {
+    display: block;
+    align-self: flex-end;
+  }
 
   /* ✅ Show hamburger button */
   #menu {
@@ -122,6 +125,30 @@
 
   #menu.show::before {
     content: "X";
+  }
+
+
+  .about {
+    padding: 20px;
+  }
+
+  .about h3 {
+    font-size: 22px;
+  }
+
+  .about p {
+    font-size: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Prevent text overflow and ensure full readability on small viewports */
+  .about-container,
+  .center-section,
+  .about {
+    width: 100%;
+    box-sizing: border-box;
+    /* Make padding part of the width */
   }
 
 
@@ -140,7 +167,7 @@
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background: white;
 }
 
@@ -170,4 +197,12 @@
 #category-filters button.active {
   background-color: #381820;
   color: white;
+}
+
+
+.gems-cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
 }
