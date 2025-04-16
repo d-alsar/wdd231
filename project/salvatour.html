@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="styles/salvatour.medium.css">
   <link rel="stylesheet" href="styles/salvatour.large.css">
   <script src="scripts/salvatour.js" type="module"></script>
+  <script src="scripts/gems.js" type="module"></script>
 </head>
 
 <body>
@@ -53,26 +54,35 @@
 
   <main>
     <div class="hero-image">
-      <img src="images/chorros.webp" alt="Hero Image" class="hero-img">
-      <div class="hero-text">
-          <h1>Discover El Salvador</h1>
-          <a href="join.html">
-          <button>Know more!</button>
-          </a>
-      </div>
-  </div>
+        <img src="images/chorros.webp" alt="Hero Image" class="hero-img">
+        <div class="hero-text">
+            <h1>Discover El Salvador</h1>
+            <a href="places.html" class="hero-button">Know more!</a>
 
-    <div style="padding-left:20px">
-      <h1>Hidden Gems</h1>
-      <hr>
+        </div>
     </div>
 
+    <div style="padding-left:20px">
+        <h1>Hidden Gems</h1>
+        <hr>
+    </div>
 
+    <div class="gems-cards-container" id="cards2-container"></div>
 
+<div class="gems-modal" id="modal">
+  <div class="gems-modal-content">
+    <span class="gems-close" id="closeModal">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p><strong>Address:</strong> <span id="modalAddress"></span></p>
+    <p><strong>Description:</strong> <span id="modalDescription"></span></p>
+    <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+    <p><strong>Website:</strong> <a href="#" id="modalWebsite" target="_blank">Visit</a></p>
+  </div>
+</div>
     <aside>
         <div id="visitMessage" class="visit-info"></div>
-      </aside>
-  </main>
+    </aside>
+</main>
   <footer>
     <p>
       <span id="currentYear"></span> 🌎Douglas R. Santos 🌎 El Salvador
